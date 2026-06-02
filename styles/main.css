@@ -78,6 +78,15 @@ body.show-cv {
     /* scroll inside panel */
     max-height: calc(100vh - 140px);
     overflow-y: auto;
+
+    animation: fadeInCV 0.6s ease forwards;
+    opacity: 0;
+}
+
+#cv-scene {
+    width: 100vw;
+    height: 100vh;
+    display: block;
 }
 
 /* ------------------------------
@@ -211,3 +220,17 @@ body.show-cv {
         font-size: 0.75rem;
     }
 }
+
+
+
+@keyframes fadeInCV {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+

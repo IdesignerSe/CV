@@ -1,44 +1,68 @@
-function initScene() {
-    const canvas = document.getElementById("cv-scene");
+// ===============================
+// THREE.JS STARTER SCENE
+// ===============================
+
+let scene, camera, renderer, cube;
+
+function initThreeScene() {
 
     // Scene
-    const scene = new THREE.Scene();
+    scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x0d0d0d);
 
     // Camera
-    const camera = new THREE.PerspectiveCamera(
-        75,
+    camera = new THREE.PerspectiveCamera(
+        60,
         window.innerWidth / window.innerHeight,
         0.1,
         1000
     );
-    camera.position.z = 3;
+    camera.position.set(2, 2, 4);
 
     // Renderer
-    const renderer = new THREE.WebGLRenderer({ canvas });
+    renderer = new THREE.WebGLRenderer({
+        canvas: document.getElementById("cv-scene"),
+        antialias: true
+    });
     renderer.setSize(window.innerWidth, window.innerHeight);
-
-    // Cube (placeholder for future 3D house)
-    const geometry = new THREE.BoxGeometry();
-    const material = new THREE.MeshStandardMaterial({ color: 0x00aaff });
-    const cube = new THREE.Mesh(geometry, material);
-    scene.add(cube);
+    renderer.setPixelRatio(window.devicePixelRatio);
 
     // Light
-    const light = new THREE.PointLight(0xffffff, 1);
-    light.position.set(5, 5, 5);
+    const light = new THREE.DirectionalLight(0xffffff, 1);
+    light.position.set(3, 5, 2);
     scene.add(light);
 
-    // Animation loop
-    function animate() {
-        requestAnimationFrame(animate);
-
-        cube.rotation.x += 0.01;
-        cube.rotation.y += 0.01;
-
-        renderer.render(scene, camera);
-    }
+    // Cube (placeholder object)
+    const geometry = new THREE.BoxGeometry(1, 1, 1);
+    const material = new THREE.MeshStandardMaterial({
+        color: 0x4da6ff,
+        roughness: 0.4,
+        metalness: 0.1
+    });
+    cube = new THREE.Mesh(geometry, material);
+    scene.add(cube);
 
     animate();
 }
 
-initScene();
+// Animation loop
+function animate() {
+    requestAnimationFrame(animate);
+
+    // Rotate cube
+    cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;
+
+    renderer.render(scene, camera);
+}
+
+// Resize handling
+window.addEventListener("resize", () => {
+    if (!renderer) return;
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+});
+
+// Initialize scene
+initThreeScene();
