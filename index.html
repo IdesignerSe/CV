@@ -1,256 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Daniel Harris - CV</title>
+    <meta charset="UTF-8">
+    <title>Daniel Harris - CV</title>
 
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, Helvetica, sans-serif;
-    }
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-    body {
-        background: #f4f4f4;
-        padding: 20px;
-    }
+        body {
+            background: #f4f4f4;
+            padding: 20px;
+        }
 
-    .cv-wrapper {
-        max-width: 1000px;
-        margin: auto;
-        background: #fff;
-        display: grid;
-        grid-template-columns: 300px 1fr;
-        border: 1px solid #ddd;
-    }
+        .cv-wrapper {
+            max-width: 1000px;
+            margin: auto;
+            background: #fff;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            border: 1px solid #ddd;
+        }
 
-    /* LEFT COLUMN */
-    .left-col {
-        background: #1f2937;
-        color: #fff;
-        padding: 30px;
-    }
+        /* LEFT COLUMN */
+        .left-col {
+            background: #1f2937;
+            color: #fff;
+            padding: 30px;
+        }
 
-    .profile-pic {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        background: #ccc;
-        margin: 0 auto 20px auto;
-        display: block;
-    }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: #ccc;
+            margin: 0 auto 20px auto;
+            display: block;
+        }
 
-    .left-col h3 {
-        margin-top: 25px;
-        margin-bottom: 10px;
-        font-size: 18px;
-        border-bottom: 1px solid #444;
-        padding-bottom: 5px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
+        .left-col h3 {
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 18px;
+            border-bottom: 1px solid #444;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-    .left-col ul {
-        list-style: none;
-        margin-top: 10px;
-        line-height: 1.6;
-        font-size: 14px;
-    }
+        .left-col ul {
+            list-style: none;
+            margin-top: 10px;
+            line-height: 1.6;
+            font-size: 14px;
+        }
 
-    .left-col p {
-        font-size: 14px;
-        line-height: 1.6;
-    }
+        .left-col p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
 
-    /* RIGHT COLUMN */
-    .right-col {
-        padding: 40px;
-    }
+        /* RIGHT COLUMN */
+        .right-col {
+            padding: 40px;
+        }
 
-    .name-title h1 {
-        font-size: 32px;
-        margin-bottom: 5px;
-    }
+        .name-title h1 {
+            font-size: 32px;
+            margin-bottom: 5px;
+        }
 
-    .name-title h2 {
-        font-size: 20px;
-        font-weight: normal;
-        color: #555;
-        margin-bottom: 20px;
-    }
+        .name-title h2 {
+            font-size: 20px;
+            font-weight: normal;
+            color: #555;
+            margin-bottom: 20px;
+        }
 
-    .section {
-        margin-bottom: 30px;
-    }
+        .section {
+            margin-bottom: 30px;
+        }
 
-    .section h3 {
-        font-size: 20px;
-        margin-bottom: 10px;
-        border-bottom: 2px solid #ddd;
-        padding-bottom: 5px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
+        .section h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-    .job {
-        margin-bottom: 20px;
-    }
+        .job {
+            margin-bottom: 20px;
+        }
 
-    .job-title {
-        font-weight: bold;
-        font-size: 16px;
-    }
+        .job-title {
+            font-weight: bold;
+            font-size: 16px;
+        }
 
-    .job-company {
-        font-style: italic;
-        color: #555;
-    }
+        .job-company {
+            font-style: italic;
+            color: #555;
+        }
 
-    .job-dates {
-        font-size: 13px;
-        color: #777;
-        margin-bottom: 8px;
-    }
+        .job-dates {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
 
-    .job ul {
-        margin-left: 18px;
-        line-height: 1.6;
-    }
+        .job ul {
+            margin-left: 18px;
+            line-height: 1.6;
+        }
 
-    .education-item {
-        margin-bottom: 15px;
-    }
+        .education-item {
+            margin-bottom: 15px;
+        }
 
-    .education-title {
-        font-weight: bold;
-        font-size: 16px;
-    }
+        .education-title {
+            font-weight: bold;
+            font-size: 16px;
+        }
 
-    .education-school {
-        font-size: 14px;
-        color: #555;
-    }
+        .education-school {
+            font-size: 14px;
+            color: #555;
+        }
 
-    .education-dates {
-        font-size: 13px;
-        color: #777;
-    }
-</style>
+        .education-dates {
+            font-size: 13px;
+            color: #777;
+        }
+
+        .skill-list {
+            list-style: none;
+            margin-top: 10px;
+            padding-left: 0;
+            font-size: 14px;
+        }
+
+        .skill-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4px;
+        }
+
+        .skill-name {
+            flex: 1;
+        }
+
+        .skill-stars {
+            margin-left: 10px;
+            color: #facc15;
+            /* gold-ish */
+            font-size: 13px;
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="cv-wrapper">
+    <div class="cv-wrapper">
 
-    <!-- LEFT COLUMN -->
-    <div class="left-col">
+        <!-- LEFT COLUMN -->
+        <div class="left-col">
 
-        <img src="profile.jpeg" alt="Profile Photo" class="profile-pic">
+            <img src="profile.jpeg" alt="Profile Photo" class="profile-pic">
 
-        <h3>Contact</h3>
-        <p>support@resumedesign.ai<br>
-        (555) 345-6789<br>
-        New York, US<br>
-        LinkedIn.com/in/daniel-harris</p>
+            <h3>Contact</h3>
+            <p>support@resumedesign.ai<br>
+                (555) 345-6789<br>
+                New York, US<br>
+                LinkedIn.com/in/daniel-harris</p>
 
-        <h3>Skills</h3>
-        <ul>
-            <li>Electrochemistry</li>
-            <li>Analytical Chemistry</li>
-            <li>Materials Science</li>
-            <li>Lab Techniques</li>
-            <li>Data Analysis</li>
-            <li>Process Optimization</li>
-            <li>Project Management</li>
-            <li>Problem Solving</li>
-            <li>Communication</li>
-        </ul>
+            <h3>Skills</h3>
+            <ul class="skill-list">
+                <li class="skill-item">
+                    <span class="skill-name">Electrochemistry</span>
+                    <span class="skill-stars">⭐⭐⭐⭐⭐</span>
+                </li>
+                <li class="skill-item">
+                    <span class="skill-name">Analytical Chemistry</span>
+                    <span class="skill-stars">⭐⭐⭐⭐⭐</span>
+                </li>
+                <li class="skill-item">
+                    <span class="skill-name">Materials Science</span>
+                    <span class="skill-stars">⭐⭐⭐⭐</span>
+                </li>
+                <li class="skill-item">
+                    <span class="skill-name">Lab Techniques</span>
+                    <span class="skill-stars">⭐⭐⭐⭐</span>
+                </li>
+                <li class="skill-item">
+                    <span class="skill-name">Data Analysis</span>
+                    <span class="skill-stars">⭐⭐⭐</span>
+                </li>
+                <li class="skill-item">
+                    <span class="skill-name">Process Optimization</span>
+                    <span class="skill-stars">⭐⭐⭐</span>
+                </li>
+                <li class="skill-item">
+                    <span class="skill-name">Project Management</span>
+                    <span class="skill-stars">⭐⭐⭐⭐⭐</span>
+                </li>
+                <li class="skill-item">
+                    <span class="skill-name">Problem Solving</span>
+                    <span class="skill-stars">⭐⭐⭐⭐</span>
+                </li>
+                <li class="skill-item">
+                    <span class="skill-name">Communication</span>
+                    <span class="skill-stars">⭐⭐⭐</span>
+                </li>
+            </ul>
 
-        <h3>Soft Skills</h3>
-        <ul>
-            <li>Problem-solving</li>
-            <li>Adaptability</li>
-            <li>Critical thinking</li>
-            <li>Time management</li>
-        </ul>
+            <h3>Languages</h3>
+            <ul>
+                <li class="skill-item">
+                    <span class="skill-name">Spanish</span>
+                    <span class="skill-stars">⭐⭐⭐⭐</span>
+                </li>
+                <li class="skill-item">
+                    <span class="skill-name">English</span>
+                    <span class="skill-stars">⭐⭐⭐⭐⭐</span>
+                </li>
+                    <li class="skill-item">
+                    <span class="skill-name">Swedish</span>
+                    <span class="skill-stars">⭐⭐⭐⭐</span>
+                </li>
+            </ul>
 
-        <h3>Languages</h3>
-        <ul>
-            <li>English</li>
-            <li>Spanish</li>
-        </ul>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="right-col">
+
+            <div class="name-title">
+                <h1>Daniel Harris</h1>
+                <h2>Electrochemical Engineer</h2>
+            </div>
+
+            <div class="section">
+                <h3>Personal Statement</h3>
+                <p>
+                    Results-driven Electrochemical Engineer with 9 years of experience in designing and optimizing
+                    electrochemical systems. Proven track record of developing innovative solutions that improve
+                    efficiency and performance. Strong background in R&D with several patents and publications.
+                </p>
+            </div>
+
+            <div class="section">
+                <h3>Work Experience</h3>
+
+                <div class="job">
+                    <div class="job-title">Senior Electrochemical Engineer</div>
+                    <div class="job-company">Tesla Inc.</div>
+                    <div class="job-dates">May 2016 - Present</div>
+                    <ul>
+                        <li>Led a team developing cutting-edge electrochemical technologies for EVs.</li>
+                        <li>Designed and optimized lithium-ion battery systems.</li>
+                        <li>Implemented safety protocols meeting industry standards.</li>
+                        <li>Published research on electrochemical advancements.</li>
+                        <li>Recognized for contributions to Tesla battery innovation.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-title">Electrochemical Engineer</div>
+                    <div class="job-company">Duracell Corp.</div>
+                    <div class="job-dates">Jan 2010 - May 2016</div>
+                    <ul>
+                        <li>Developed new electrochemical processes for battery performance.</li>
+                        <li>Conducted experiments and analyzed durability data.</li>
+                        <li>Collaborated with cross-functional engineering teams.</li>
+                        <li>Mentored junior engineers.</li>
+                        <li>Received awards for innovative contributions.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Education</h3>
+
+                <div class="education-item">
+                    <div class="education-title">Masters in Electrochemical Engineering</div>
+                    <div class="education-school">University of California, Berkeley</div>
+                    <div class="education-dates">Sep 2010 - May 2012</div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-title">Bachelors in Chemical Engineering</div>
+                    <div class="education-school">Stanford University</div>
+                    <div class="education-dates">Sep 2006 - May 2010</div>
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
-
-    <!-- RIGHT COLUMN -->
-    <div class="right-col">
-
-        <div class="name-title">
-            <h1>Daniel Harris</h1>
-            <h2>Electrochemical Engineer</h2>
-        </div>
-
-        <div class="section">
-            <h3>Personal Statement</h3>
-            <p>
-                Results-driven Electrochemical Engineer with 9 years of experience in designing and optimizing 
-                electrochemical systems. Proven track record of developing innovative solutions that improve 
-                efficiency and performance. Strong background in R&D with several patents and publications.
-            </p>
-        </div>
-
-        <div class="section">
-            <h3>Work Experience</h3>
-
-            <div class="job">
-                <div class="job-title">Senior Electrochemical Engineer</div>
-                <div class="job-company">Tesla Inc.</div>
-                <div class="job-dates">May 2016 - Present</div>
-                <ul>
-                    <li>Led a team developing cutting-edge electrochemical technologies for EVs.</li>
-                    <li>Designed and optimized lithium-ion battery systems.</li>
-                    <li>Implemented safety protocols meeting industry standards.</li>
-                    <li>Published research on electrochemical advancements.</li>
-                    <li>Recognized for contributions to Tesla battery innovation.</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <div class="job-title">Electrochemical Engineer</div>
-                <div class="job-company">Duracell Corp.</div>
-                <div class="job-dates">Jan 2010 - May 2016</div>
-                <ul>
-                    <li>Developed new electrochemical processes for battery performance.</li>
-                    <li>Conducted experiments and analyzed durability data.</li>
-                    <li>Collaborated with cross-functional engineering teams.</li>
-                    <li>Mentored junior engineers.</li>
-                    <li>Received awards for innovative contributions.</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="section">
-            <h3>Education</h3>
-
-            <div class="education-item">
-                <div class="education-title">Masters in Electrochemical Engineering</div>
-                <div class="education-school">University of California, Berkeley</div>
-                <div class="education-dates">Sep 2010 - May 2012</div>
-            </div>
-
-            <div class="education-item">
-                <div class="education-title">Bachelors in Chemical Engineering</div>
-                <div class="education-school">Stanford University</div>
-                <div class="education-dates">Sep 2006 - May 2010</div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
 
 </body>
+
 </html>
