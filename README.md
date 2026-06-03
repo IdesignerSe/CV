@@ -47,4 +47,4 @@ project-folder/
 │── style.css   (Future Changes)
 │── profile.jpg
 └── assets/     (Future Changes)
-```text
+```
