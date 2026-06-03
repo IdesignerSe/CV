@@ -18,14 +18,14 @@ Includes a left sidebar for personal details and a right column for professional
 ---
 
 ## 📁 Project Structure
-
-`text´
+```text
 project-folder/
 │── index.html
 │── style.css   (Future Changes)
 │── profile.jpg
 └── assets/     (Future Changes)
-`text´
+```text
+
 
 ---
 
