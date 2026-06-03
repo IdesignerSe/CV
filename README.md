@@ -17,28 +17,17 @@ Includes a left sidebar for personal details and a right column for professional
 
 ---
 
-## 📁 Project Structure
-```text
-project-folder/
-│── index.html
-│── style.css   (Future Changes)
-│── profile.jpg
-└── assets/     (Future Changes)
-```text
-
-
----
-
 ## 🧩 Sections Included
 
-### **Left Column**
+
+## **Left Column**
 - Profile photo  
 - Contact details  
 - Skills with star ratings  
 - Soft skills  
 - Languages  
 
-### **Right Column**
+## **Right Column**
 - Name & professional title  
 - Personal statement  
 - Work experience  
@@ -50,3 +39,12 @@ project-folder/
 
 Place your image in the same folder as `index.html`:
 
+
+## 📁 Project Structure
+```text
+project-folder/
+│── index.html
+│── style.css   (Future Changes)
+│── profile.jpg
+└── assets/     (Future Changes)
+```text
