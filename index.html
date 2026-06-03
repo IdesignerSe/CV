@@ -1,126 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D CV Experience</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script>
-    <script src="scripts/three-scene.js"></script>
-    <script src="scripts/main.js"></script>
+<meta charset="UTF-8">
+<title>Daniel Harris - CV</title>
 
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+        background: #f4f4f4;
+        padding: 20px;
+    }
+
+    .cv-wrapper {
+        max-width: 1000px;
+        margin: auto;
+        background: #fff;
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        border: 1px solid #ddd;
+    }
+
+    /* LEFT COLUMN */
+    .left-col {
+        background: #1f2937;
+        color: #fff;
+        padding: 30px;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background: #ccc;
+        margin: 0 auto 20px auto;
+        display: block;
+    }
+
+    .left-col h3 {
+        margin-top: 25px;
+        margin-bottom: 10px;
+        font-size: 18px;
+        border-bottom: 1px solid #444;
+        padding-bottom: 5px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .left-col ul {
+        list-style: none;
+        margin-top: 10px;
+        line-height: 1.6;
+        font-size: 14px;
+    }
+
+    .left-col p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    /* RIGHT COLUMN */
+    .right-col {
+        padding: 40px;
+    }
+
+    .name-title h1 {
+        font-size: 32px;
+        margin-bottom: 5px;
+    }
+
+    .name-title h2 {
+        font-size: 20px;
+        font-weight: normal;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    .section {
+        margin-bottom: 30px;
+    }
+
+    .section h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 5px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .job {
+        margin-bottom: 20px;
+    }
+
+    .job-title {
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .job-company {
+        font-style: italic;
+        color: #555;
+    }
+
+    .job-dates {
+        font-size: 13px;
+        color: #777;
+        margin-bottom: 8px;
+    }
+
+    .job ul {
+        margin-left: 18px;
+        line-height: 1.6;
+    }
+
+    .education-item {
+        margin-bottom: 15px;
+    }
+
+    .education-title {
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .education-school {
+        font-size: 14px;
+        color: #555;
+    }
+
+    .education-dates {
+        font-size: 13px;
+        color: #777;
+    }
+</style>
 </head>
 
 <body>
 
-    <!-- ============================
-         TOP MENU (with separation)
-    ============================= -->
-    <nav id="top-menu">
-        <button id="btn-cv">Classic CV</button>
-        <button id="btn-3d">3D Experience</button>
-    </nav>
+<div class="cv-wrapper">
 
-    <!-- Separator line under menu -->
-    <div id="menu-separator"></div>
+    <!-- LEFT COLUMN -->
+    <div class="left-col">
 
-    <!-- ============================
-         CLASSIC CV PANEL
-    ============================= -->
-    <canvas id="cv-scene"></canvas>
+        <img src="profile.jpg" alt="Profile Photo" class="profile-pic">
 
-    <section id="cv-panel">
+        <h3>Contact</h3>
+        <p>support@resumedesign.ai<br>
+        (555) 345-6789<br>
+        New York, US<br>
+        LinkedIn.com/in/daniel-harris</p>
 
-        <header class="cv-header">
-            <h1>Your Name</h1>
-            <h2>Software Developer / Frontend & C#</h2>
+        <h3>Skills</h3>
+        <ul>
+            <li>Electrochemistry</li>
+            <li>Analytical Chemistry</li>
+            <li>Materials Science</li>
+            <li>Lab Techniques</li>
+            <li>Data Analysis</li>
+            <li>Process Optimization</li>
+            <li>Project Management</li>
+            <li>Problem Solving</li>
+            <li>Communication</li>
+        </ul>
+
+        <h3>Soft Skills</h3>
+        <ul>
+            <li>Problem-solving</li>
+            <li>Adaptability</li>
+            <li>Critical thinking</li>
+            <li>Time management</li>
+        </ul>
+
+        <h3>Languages</h3>
+        <ul>
+            <li>English</li>
+            <li>Spanish</li>
+        </ul>
+
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="right-col">
+
+        <div class="name-title">
+            <h1>Daniel Harris</h1>
+            <h2>Electrochemical Engineer</h2>
+        </div>
+
+        <div class="section">
+            <h3>Personal Statement</h3>
             <p>
-                Malmö, Sweden ·
-                <a href="mailto:you@example.com">you@example.com</a> ·
-                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+                Results-driven Electrochemical Engineer with 9 years of experience in designing and optimizing 
+                electrochemical systems. Proven track record of developing innovative solutions that improve 
+                efficiency and performance. Strong background in R&D with several patents and publications.
             </p>
-        </header>
+        </div>
 
-        <section class="cv-section">
-            <h3>Profile</h3>
-            <p>
-                Motivated software development student focusing on C#, .NET, and modern front‑end
-                development. Passionate about UI/UX, clean code, and building interactive experiences
-                such as 3D CV environments using Three.js.
-            </p>
-        </section>
+        <div class="section">
+            <h3>Work Experience</h3>
 
-        <section class="cv-section">
-            <h3>Skills</h3>
-            <ul class="cv-list">
-                <li><strong>Languages:</strong> C#, JavaScript, HTML, CSS</li>
-                <li><strong>Frameworks:</strong> .NET, Three.js</li>
-                <li><strong>Tools:</strong> Git, GitHub, VS Code, Visual Studio</li>
-                <li><strong>Concepts:</strong> OOP, validation logic, UI/UX, HCI</li>
-            </ul>
-        </section>
-
-        <section class="cv-section">
-            <h3>Projects</h3>
-
-            <div class="cv-item">
-                <h4>Product List Manager (C#/.NET)</h4>
-                <p class="cv-meta">2026</p>
+            <div class="job">
+                <div class="job-title">Senior Electrochemical Engineer</div>
+                <div class="job-company">Tesla Inc.</div>
+                <div class="job-dates">May 2016 - Present</div>
                 <ul>
-                    <li>Console-based product manager with validation and error handling.</li>
-                    <li>Structured with clean code and modular design.</li>
-                    <li>Includes README and documentation for recruiters.</li>
+                    <li>Led a team developing cutting-edge electrochemical technologies for EVs.</li>
+                    <li>Designed and optimized lithium-ion battery systems.</li>
+                    <li>Implemented safety protocols meeting industry standards.</li>
+                    <li>Published research on electrochemical advancements.</li>
+                    <li>Recognized for contributions to Tesla battery innovation.</li>
                 </ul>
             </div>
 
-            <div class="cv-item">
-                <h4>3D CV House (Three.js)</h4>
-                <p class="cv-meta">2026</p>
+            <div class="job">
+                <div class="job-title">Electrochemical Engineer</div>
+                <div class="job-company">Duracell Corp.</div>
+                <div class="job-dates">Jan 2010 - May 2016</div>
                 <ul>
-                    <li>Interactive CV experience with 3D scene and UI toggle.</li>
-                    <li>Responsive layout with dual-mode interface.</li>
-                    <li>Uses JavaScript for state management and animations.</li>
+                    <li>Developed new electrochemical processes for battery performance.</li>
+                    <li>Conducted experiments and analyzed durability data.</li>
+                    <li>Collaborated with cross-functional engineering teams.</li>
+                    <li>Mentored junior engineers.</li>
+                    <li>Received awards for innovative contributions.</li>
                 </ul>
             </div>
-        </section>
+        </div>
 
-        <section class="cv-section">
+        <div class="section">
             <h3>Education</h3>
-            <div class="cv-item">
-                <h4>Software Development Studies</h4>
-                <p class="cv-meta">20XX – Present</p>
-                <p>
-                    Focus on C#, .NET, UI/UX, and practical project-based learning.
-                </p>
+
+            <div class="education-item">
+                <div class="education-title">Masters in Electrochemical Engineering</div>
+                <div class="education-school">University of California, Berkeley</div>
+                <div class="education-dates">Sep 2010 - May 2012</div>
             </div>
-        </section>
 
-        <section class="cv-section">
-            <h3>Experience</h3>
-            <div class="cv-item">
-                <h4>Relevant Experience</h4>
-                <p class="cv-meta">Self‑Driven Projects · 2025–2026</p>
-                <p>
-                    Built multiple practical applications demonstrating problem solving, clean code,
-                    and user-centered design.
-                </p>
+            <div class="education-item">
+                <div class="education-title">Bachelors in Chemical Engineering</div>
+                <div class="education-school">Stanford University</div>
+                <div class="education-dates">Sep 2006 - May 2010</div>
             </div>
-        </section>
 
-    </section>
+        </div>
 
-    <!-- ============================
-         3D CANVAS
-    ============================= -->
-    <canvas id="cv-scene"></canvas>
+    </div>
 
-    <!-- ============================
-         SCRIPTS
-    ============================= -->
-    <script src="scripts/three-scene.js"></script>
-    <script src="scripts/main.js"></script>
+</div>
 
 </body>
-
 </html>
