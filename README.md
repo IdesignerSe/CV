@@ -19,13 +19,13 @@ Includes a left sidebar for personal details and a right column for professional
 
 ## 📁 Project Structure
 
-text´
+`text´
 project-folder/
 │── index.html
-│── style.css   (optional if you separate CSS)
+│── style.css   (Future Changes)
 │── profile.jpg
-└── assets/     (optional for images or icons)
-text´
+└── assets/     (Future Changes)
+`text´
 
 ---
 
